@@ -3,25 +3,26 @@
 
 
 
-# docker_serve
-Docker_serve_upload
+# docker_serve <br/>
+Docker_serve_upload<br/>
 
-Commands:
-1. Create 'Dockerfile' in the root folder:
-2. Run MVN package
+Commands:<br/>
+1. Create 'Dockerfile' in the root folder:<br/>
+2. Run MVN package<br/>
+<br/>
+#base docker image<br/>
+FROM openjdk:11<br/>
+LABEL maintainer="andrey.net"<br/>
+ADD target/docker-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar #file created under MVN package<br/>
+ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]<br/><br/>
 
-#base docker image
-FROM openjdk:11
-LABEL maintainer="andrey.net"
-ADD target/docker-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar #file created under MVN package
-ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]
-3. Build
-docker build -t springboot-docker:latest .
+3. Build<br/>
+docker build -t springboot-docker:latest .<br/>
 
-4. Docker images
-docker images
+4. Docker images<br/>
+docker images<br/>
 
-5. Run
-docker run -p 8080:8080 springboot-docker
+5. Run<br/>
+docker run -p 8080:8080 springboot-docker<br/>
 
 
