@@ -25,4 +25,11 @@ docker images<br/>
 5. Run<br/>
 docker run -p 8080:8080 springboot-docker<br/>
 
+6. Connect to server:<br/>
+ssh-keygen<br/>
+//copy-paste and write secret word. Then build docker image and run it again via command line within the server<br/>
+
+The end<br/>
+***<br/>
+
 
