@@ -4,30 +4,35 @@
 
 
 # docker_serve <br/>
-Docker_serve_upload<br/>
+<b>Docker_serve_upload</b><br/>
 
 Commands:<br/>
-1. Create 'Dockerfile' in the root folder:<br/>
-2. Run MVN package<br/>
+<b>1. Create 'Dockerfile' in the root folder:</b><br/>
+<b>2. Run MVN package</b><br/>
 <br/>
+
 #base docker image<br/>
 FROM openjdk:11<br/>
 LABEL maintainer="andrey.net"<br/>
 ADD target/docker-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar #file created under MVN package<br/>
 ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]<br/><br/>
 
-3. Build<br/>
-docker build -t springboot-docker:latest .<br/>
 
-4. Docker images<br/>
-docker images<br/>
+<b>3. Build</b><br/>
+<code>docker build -t springboot-docker:latest .</code><br/>
 
-5. Run<br/>
-docker run -p 8080:8080 springboot-docker<br/>
+<b>4. Docker images</b><br/>
+<code>docker images</code><br/>
 
-6. Connect to server:<br/>
-ssh-keygen<br/>
+<b>5. Run</b><br/>
+<code>docker run -p 8080:8080 springboot-docker</code><br/>
+
+<b>6. Connect to server:</b><br/>
+<code>ssh-keygen</code><br/>
 //copy-paste and write secret word. Then build docker image and run it again via command line within the server<br/>
+
+**run in browser:<br/>
+ServerIP:8080/welcome<br/>
 
 The end<br/>
 ***<br/>
