@@ -33,7 +33,7 @@ ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]<br/><br/>
 <code>ssh-keygen</code><br/>
 //copy-paste and write secret word. Then build docker image and run it again via command line within the server<br/>
 
-**run in browser:<br/>
+<b>run in browser:</b><br/>
 <code>ServerIP:8080/welcome</code><br/>
 
 The end<br/>
